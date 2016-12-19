@@ -1,0 +1,27 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+gonc.tk			IN SOA	SRI-GONC-DEBIAN-S2.gonc.tk. mail.gonc.tk. (
+				22         ; serial
+				604800     ; refresh (1 week)
+				86400      ; retry (1 day)
+				2419200    ; expire (4 weeks)
+				86400      ; minimum (1 day)
+				)
+	
+	IN	NS	SRI-GONC-DEBIAN-S2.gonc.tk.
+
+$ORIGIN gonc.tk.
+localhost		A	127.0.0.1
+SRI-GONC-CENTOS-S3	A	168.192.0.4
+SRI-GONC-DEBIAN-ROUTER-S1 A	168.192.0.2
+SRI-GONC-DEBIAN-S2	A	168.192.0.3
+SRI-GONC-VBOXNAT-S0	A	168.192.0.1
+
+$TTL 1200	; 20 minutes
+SRI-GONC-W10-CL1	A	168.192.0.25
+			AAAA	2002:a8c0:19::a8c0:19
+SRI-GONC-W2012-S4	A	168.192.0.5
+			AAAA	2002:a8c0:5::a8c0:5
+
+$TTL 86400	; 1 day
+www			A	31.170.165.152

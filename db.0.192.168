@@ -1,0 +1,23 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+0.192.168.in-addr.arpa	IN SOA	SRI-GONC-DEBIAN-S2.gonc.tk. mail.gonc.tk. (
+				6          ; serial
+				604800     ; refresh (1 week)
+				86400      ; retry (1 day)
+				2419200    ; expire (4 weeks)
+				86400      ; minimum (1 day)
+				)
+			NS	SRI-GONC-DEBIAN-S2.gonc.tk.
+$ORIGIN 0.192.168.in-addr.arpa.
+1			PTR	SRI-GONC-VBOXNAT-S0
+2			PTR	SRI-GONC-DEBIAN-ROUTER-S1
+$TTL 3600	; 1 hour
+25			PTR	SRI-GONC-W10-CL1.gonc.tk.
+28			PTR	SRI-GONC-W2012-S4.gonc.tk.
+$TTL 86400	; 1 day
+3			PTR	SRI-GONC-DEBIAN-S2.gonc.tk.
+4			PTR	SRI-GONC-CENTOS-S3
+$TTL 3600	; 1 hour
+5			PTR	SRI-GONC-W2012-S4.gonc.tk.
+$TTL 86400	; 1 day
+SRI-GONC-DEBIAN-S2	A	168.192.0.3

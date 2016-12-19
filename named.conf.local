@@ -1,0 +1,20 @@
+// File /etc/bind/named.conf.local
+// Do any local configuration here
+
+// ZONA DIRECTA
+zone "gonc.tk" IN {
+	type master;
+	file "/etc/bind/db.gonc.tk";
+	allow-update { 168.192.0.2; 168.192.0.0/24; key rndc-key; };
+	allow-query {any;};
+	notify yes;
+};
+
+// ZONA INDIRECTA O INVERSA
+zone "0.192.168.in-addr.arpa" IN {
+	type master;
+	file "/etc/bind/db.0.192.168";
+	allow-update { 168.192.0.2; 168.192.0.0/24; key rndc-key; };
+	allow-query {any;};
+	notify yes;
+};
